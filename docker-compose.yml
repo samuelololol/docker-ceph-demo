@@ -1,0 +1,10 @@
+ceph:
+    image: ceph/demo:tag-build-master-jewel-centos-7
+    environment:
+        - MON_IP=0.0.0.0
+        - CEPH_PUBLIC_NETWORK=172.17.0.0/24
+        #- RGW_CIVETWEB_PORT=8888
+    #net: "host"
+    ports:
+        - "8888:80"
+
