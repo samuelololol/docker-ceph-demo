@@ -1,0 +1,60 @@
+body {
+    margin: 20px;
+    line-height: 3;
+    font-family: sans-serif;
+        
+}
+
+div {
+    position: relative;
+}
+
+ul {
+    text-indent: .5em;
+    border-left: .25em solid gray;
+}
+
+ul ul {
+    margin-top: -1.25em;
+    margin-left: 1em;
+    
+}
+
+li {
+    position: relative;
+    bottom: -1.25em;
+}
+
+li:before {
+    content: "";
+    display: inline-block;
+    width: 2em;
+    height: 0;
+    position: relative;
+    left: -.75em;
+    border-top: .25em solid gray;
+}
+
+ul ul:before, h3:before, li:after {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    background: salmon;
+    border: .25em solid white;
+    top: 1em;
+    left: .4em;
+}
+
+h3 {
+    position: absolute;
+    top: -1em;
+    left: 1.75em;
+}
+
+h3:before {
+    left: -2.25em;
+    top: .5em;
+}
+
