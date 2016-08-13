@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Ceph RADOS Gateway</title>
+
+<ul>
+{% for bucket in items %}
+  <li>(b) {{ bucket.bucket_name }}
+    <ul>
+    {% for key in bucket['keys'] %}
+      <li>(k) {{ key.key_name }} </li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
+
