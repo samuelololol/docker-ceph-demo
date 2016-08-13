@@ -35,7 +35,7 @@ def index():
     return render_template('index.jinja2', items=items)
 
 
-@app.route('/<bucket_name>')
+@app.route('/<bucket_name>', methods=['GET'])
 def bucket(bucket_name):
     conn = ceph_connect()
     buckets = ceph_list_buckets(conn)
